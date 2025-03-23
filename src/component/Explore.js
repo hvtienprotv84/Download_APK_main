@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from '../Text';
 import '../../src/component/Explore.css';
+import { Link } from 'react-router-dom';
 
 export default function Explore() {
   
@@ -17,12 +18,18 @@ export default function Explore() {
         </div>
       </div>
         <div>
-          <img className="img_cv" src="anh1.jpg" alt="Ảnh CV"/>
-          <img className="img_cv" src="anh1.jpg" alt="Ảnh CV"/>
-          <img className="img_cv" src="anh1.jpg" alt="Ảnh CV"/>
-          <img className="img_cv" src="anh1.jpg" alt="Ảnh CV"/>
-          <img className="img_cv" src="anh1.jpg" alt="Ảnh CV"/>
+          <img className="img_cv" src="anhapp1.jpg" alt="Ảnh CV"/>
+          <img className="img_cv" src="anhapp2.jpg" alt="Ảnh CV"/>
+          <img className="img_cv" src="anhapp3.jpg" alt="Ảnh CV"/>
+          <img className="img_cv" src="anhapp4.jpg" alt="Ảnh CV"/>
+          <img className="img_cv" src="anhapp5.jpg" alt="Ảnh CV"/>
         </div>
+
+      <div className="link_history_apk">
+        <img className="link_history_apk_img" src="history_apk.png" alt='' />
+        <Link className="link_history_apk_text" to="/HistoryAPK"><Text tid="history_apk" /></Link>
+      </div>
+
 
         {/* <h2 className="download"><b><Text tid="welcomeDescription" /></b></h2> */}
         {/* <a className="download" href="path-to-your-file.pdf" download="filename.pdf">
@@ -53,7 +60,7 @@ export default function Explore() {
   </svg>
 
   <span className="texts">
-    <span className="text-2"><Text tid="title_version" /></span>
+    <span className="text-2">220325.apk</span>
     <span className="text-1"><Text tid="download_version" /></span>
   </span>
 </a>

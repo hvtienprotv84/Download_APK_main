@@ -17,9 +17,10 @@
 
 .img_cv{
  width: 280px;
+ height: 550px;
  margin-top: -22px;
  padding: 10px;
-}
+} 
 
 .container_title{
     display: flex;
@@ -63,6 +64,60 @@
 
 }
 
+.link_history_apk{
+  position: absolute;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  right: 250px; /* Căn phải */
+  top: 92%;  /* Nếu muốn nó nằm ở giữa theo chiều dọc */
+  transform: translateY(-50%); /* Để canh giữa theo chiều dọc */
+  /* margin-right: 300px; */
+}
+
+.link_history_apk_text{
+  text-decoration: none;
+  color: white;
+}
+
+.link_history_apk_img{
+  width: 50px;
+}
+
+.backtohome{
+  position: absolute;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  right: 250px; /* Căn phải */
+  top: 92%;  /* Nếu muốn nó nằm ở giữa theo chiều dọc */
+  transform: translateY(-50%); /* Để canh giữa theo chiều dọc */
+}
+
+.backtohome_text{
+  text-decoration: none;
+  color: white ;
+}
+
+.title_history_apk{
+  position: absolute;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  top: 0%; /* Căn giữa theo chiều dọc */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%); /* Dịch chuyển phần tử lại về chính giữa */
+}
+
+
+.container_title_history_apk{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 /* From Uiverse.io by aronnomridha */ 
 .authorized-reseller-api-btn {
@@ -104,5 +159,40 @@
     font-weight: 600;
     margin-bottom: 0.25rem;
     font-size: 20px;
+  }
+
+  .apk-list {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép phần tử "quay lại" khi không đủ chỗ */
+    gap: 30px; /* Khoảng cách giữa các item */
+    justify-content: center; /* Căn giữa các phần tử trong hàng */
+    position: absolute;
+    top: 50%; /* Căn giữa theo chiều dọc */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Dịch chuyển phần tử lại về chính giữa */
+    width: 100%; /* Giới hạn chiều rộng tối đa của mỗi item */
+
+  }
+  
+  .apk-item {
+    display: flex;
+    flex-direction: column; /* Đảm bảo các phần tử bên trong item xếp theo cột */
+    align-items: center; /* Căn giữa nội dung của từng item */
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0); /* Thêm viền cho mỗi item */
+    padding: 10px;
+    border-radius: 8px; /* Bo góc cho các phần tử */
+    background-color: #00FF7A; /* Nền trong suốt */
+    max-width: 400px; /* Giới hạn chiều rộng tối đa của mỗi item */
+    width: 100%; /* Đảm bảo mỗi item không rộng hơn max-width */
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000
+  }
+  
+  @media (min-width: 600px) {
+    .apk-item {
+      width: calc(33.33% - 20px); /* Mỗi item chiếm 1/3 chiều rộng (3 items trong 1 hàng) */
+    }
   }
   
