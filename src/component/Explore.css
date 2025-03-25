@@ -16,10 +16,10 @@
 }
 
 .img_cv{
- width: 280px;
+ width: 260px;
  height: 520px;
  margin-top: -22px;
- padding: 10px;
+ padding: 20px;
  margin-top: 15px;
 } 
 
@@ -192,9 +192,72 @@
     color: #000000
   }
   
+/*
   @media (min-width: 600px) {
+    .apk-item {
+      width: calc(33.33% - 20px); 
+    }
+
+  }
+*/
+
+  @media screen and (max-width: 600px) {
     .apk-item {
       width: calc(33.33% - 20px); /* Mỗi item chiếm 1/3 chiều rộng (3 items trong 1 hàng) */
     }
+    
+    .img_cv{
+      width: 180px;
+      height: 220px;
+      width: calc(33.33% - 20px); /* Mỗi item chiếm 1/3 chiều rộng (3 items trong 1 hàng) */
+      padding: 10px;
+     }
+     
+     .title{
+      font-size: 16px;
+      margin-left: 5px;
+    }
+
+    .img_reactnative{
+      width: 20px;
+    }
+
+    .img_android{
+      width: 20px;
+    }
+
+    .container_img_title_android{
+      width: 350px;        /* Đảm bảo <h1> chiếm toàn bộ chiều rộng của .container_img_title_android */
+      margin: 0;          /* Loại bỏ khoảng cách mặc định */
+      padding: 0;         /* Loại bỏ khoảng cách padding mặc định nếu cần */
+    }
+    
+    .container_img_title_reactnative{
+      width: 150px;        /* Đảm bảo <h1> chiếm toàn bộ chiều rộng của .container_img_title_android */
+      margin: 0;          /* Loại bỏ khoảng cách mặc định */
+      padding: 0;         /* Loại bỏ khoảng cách padding mặc định nếu cần */
+    }
+
+    .container_title{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 135px;
+      left: 55%;
+      right: 50%;               
+      transform: translate(-50%, -50%); /* Dịch chuyển phần tử lại về chính giữa */
+    }
+
+    .container_button_download{
+      bottom: 90px;                /* Đặt khoảng cách từ trên là 10px */
+    }
+
+    .link_history_apk{
+      top: 93%;
+      left: 0%;
+      width: 200px;
+    }
+   
   }
   

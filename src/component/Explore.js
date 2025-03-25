@@ -9,11 +9,11 @@ export default function Explore() {
       <div>
       <div className="container_title">
         <div className="container_img_title_android">
-          <img className="img_android" src="android.png" alt='' />&nbsp;
+          <img className="img_android" src="android.png" alt='' />
           <h1 className="title"> <Text tid="exploreHeader" /></h1> &nbsp;&nbsp;
         </div>
         <div className="container_img_title_reactnative">
-        <img className="img_reactnative" src="reactnative.png" alt='' />&nbsp;
+        <img className="img_reactnative" src="reactnative.png" alt='' />
         <h1 className="title"> <Text tid="reactnative" /></h1>
         </div>
       </div>
