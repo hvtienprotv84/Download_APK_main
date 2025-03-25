@@ -37,7 +37,7 @@ export default function Explore() {
         </a> */}
 
 
-<div className="download">
+<div className="container_button_download">
         <a href="f497.apk" download className="authorized-reseller-api-btn">
   <svg
     height="42"

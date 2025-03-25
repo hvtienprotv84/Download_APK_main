@@ -3,12 +3,12 @@
     font-size: 26px;
 }
 
-.download{
+.container_button_download{
     display: flex;
     justify-content: center;  /* Căn giữa theo chiều ngang */
     align-items: center;      /* Căn giữa theo chiều dọc */
     position: absolute;       /* Để có thể sử dụng top */
-    bottom: 50px;                /* Đặt khoảng cách từ trên là 10px */
+    bottom: 10px;                /* Đặt khoảng cách từ trên là 10px */
     left: 50%;                /* Căn giữa theo chiều ngang */
     transform: translateX(-50%); /* Đảm bảo phần tử được căn chính xác ở giữa */
     text-decoration: none;
@@ -17,9 +17,10 @@
 
 .img_cv{
  width: 280px;
- height: 550px;
+ height: 520px;
  margin-top: -22px;
  padding: 10px;
+ margin-top: 15px;
 } 
 
 .container_title{
@@ -74,7 +75,7 @@
   flex-direction: row;
   align-items: center;
   right: 250px; /* Căn phải */
-  top: 92%;  /* Nếu muốn nó nằm ở giữa theo chiều dọc */
+  top: 94%;  /* Nếu muốn nó nằm ở giữa theo chiều dọc */
   transform: translateY(-50%); /* Để canh giữa theo chiều dọc */
   /* margin-right: 300px; */
 }
@@ -133,6 +134,7 @@
     outline: 0;
     transition: all 0.8s;
     text-decoration: none;
+    max-height: 100%;
   }
   
   .authorized-reseller-api-btn:hover {
