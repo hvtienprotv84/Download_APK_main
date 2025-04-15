@@ -2,9 +2,21 @@ import React from 'react';
 import { Text } from '../Text';
 import '../../src/component/Explore.css';
 import { Link } from 'react-router-dom';
+import { apkList } from './HistoryAPK'; // cập nhật path cho đúng nếu khác
 
 export default function Explore() {
   
+  const newestApk = apkList
+  .slice()
+  .sort((a, b) => {
+    const parseDate = (str) => {
+      const [day, month, year] = str.split('.').map(Number);
+      const fullYear = year < 100 ? 2000 + year : year;
+      return new Date(fullYear, month - 1, day);
+    };
+    return parseDate(b.date) - parseDate(a.date);
+  })[0]; // lấy phần tử đầu tiên sau khi sắp xếp
+
     return (
       <div>
       <div className="container_title">
@@ -38,8 +50,9 @@ export default function Explore() {
 
 
 <div className="container_button_download">
-        <a href="f497.apk" download className="authorized-reseller-api-btn">
-  <svg
+        {/* <a href="f497.apk" download className="authorized-reseller-api-btn"> */}
+        <a href={newestApk?.apkFile} download className="authorized-reseller-api-btn">
+<svg
     height="42"
     width="40"
     viewBox="0 0 24 24"
@@ -60,7 +73,8 @@ export default function Explore() {
   </svg>
 
   <span className="texts">
-    <span className="text-2">220325.apk</span>
+    {/* <span className="text-2">220325.apk</span> */}
+    <span className="text-2">{newestApk?.name}</span>
     <span className="text-1"><Text tid="download_version" /></span>
   </span>
 </a>

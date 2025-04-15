@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import '../../src/component/Explore.css';
 
 // Dữ liệu JSON về các ứng dụng và tệp APK
-const apkList = [
+export const apkList = [
   {
-    name: "220325.apk",
+    name: "225525.apk",
     date: "22.03.2025",
     apkFile: "/history_apk/080325.apk"  // Đảm bảo không dùng "./public/"
   },
@@ -65,6 +65,21 @@ const apkList = [
     date: "08.03.25",
     apkFile: "/history_apk/080325.apk"
   },
+  {
+    name: "100325.apk",
+    date: "10.03.25",
+    apkFile: "/history_apk/100325.apk"
+  },
+  {
+    name: "090325.apk",
+    date: "09.03.25",
+    apkFile: "/history_apk/090325.apk"
+  },
+  {
+    name: "000000.apk",
+    date: "15.04.25",
+    apkFile: "/history_apk/080325.apk"
+  },  
 ];
 
 const Page1 = () => {
@@ -72,14 +87,33 @@ const Page1 = () => {
     <div>
       <h2 className="title_history_apk"><Text tid="history_apk" /></h2>
       <div className="apk-list">
-        {apkList.map((item, index) => (
+        {/* {apkList.slice(0, 12).map((item, index) => (
           <div key={index} className="apk-item">
             <span>{item.name} - {item.date}</span>
             <a href={item.apkFile} download={item.name}>
               <button>Tải về</button>
             </a>
           </div>
-        ))}
+        ))} */}
+        {apkList
+  .slice() // tạo bản sao để không thay đổi mảng gốc
+  .sort((a, b) => {
+    const parseDate = (str) => {
+      const [day, month, year] = str.split('.').map(Number);
+      const fullYear = year < 100 ? 2000 + year : year;
+      return new Date(fullYear, month - 1, day);
+    };
+    return parseDate(b.date) - parseDate(a.date); // sắp xếp giảm dần
+  })
+  .slice(0, 12)
+  .map((item, index) => (
+    <div key={index} className="apk-item">
+      <span>{item.name} - {item.date}</span>
+      <a href={item.apkFile} download={item.name}>
+        <button>Tải về</button>
+      </a>
+    </div>
+))}
       </div>
         <div className="backtohome">
           <Link className="backtohome_text" to="/">Trang Chủ</Link>
