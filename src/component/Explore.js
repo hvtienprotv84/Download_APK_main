@@ -30,11 +30,13 @@ export default function Explore() {
         </div>
       </div>
         <div>
-          <img className="img_cv" src="anhapp1.jpg" alt="Ảnh CV"/>
-          <img className="img_cv" src="anhapp2.jpg" alt="Ảnh CV"/>
-          <img className="img_cv" src="anhapp3.jpg" alt="Ảnh CV"/>
-          <img className="img_cv" src="anhapp4.jpg" alt="Ảnh CV"/>
-          <img className="img_cv" src="anhapp5.jpg" alt="Ảnh CV"/>
+          <img className="img_cv" src="../IMG_PersonalPortfolioAppMobile/anh_PersonalPortfolioAppMobile_1.jpg" alt="Ảnh CV"/>
+          <img className="img_cv" src="../IMG_PersonalPortfolioAppMobile/anh_PersonalPortfolioAppMobile_2.jpg" alt="Ảnh CV"/>
+          <img className="img_cv" src="../IMG_PersonalPortfolioAppMobile/anh_PersonalPortfolioAppMobile_3.jpg" alt="Ảnh CV"/>
+          <img className="img_cv" src="../IMG_PersonalPortfolioAppMobile/anh_PersonalPortfolioAppMobile_4.jpg" alt="Ảnh CV"/>
+          <img className="img_cv" src="../IMG_PersonalPortfolioAppMobile/anh_PersonalPortfolioAppMobile_5.jpg" alt="Ảnh CV"/>
+          <img className="img_cv" src="../IMG_PersonalPortfolioAppMobile/anh_PersonalPortfolioAppMobile_6.jpg" alt="Ảnh CV"/>
+          <img className="img_cv" src="../IMG_PersonalPortfolioAppMobile/anh_PersonalPortfolioAppMobile_7.jpg" alt="Ảnh CV"/>
         </div>
 
       <div className="link_history_apk">
